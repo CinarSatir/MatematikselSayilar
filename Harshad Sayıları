@@ -1,0 +1,19 @@
+#Harshad sayiları rakamları toplamına tam bölünebilen sayılara denir
+#İlk önce kullanıcıdan bir sayı istiyoruz bu sayıyı '''input'''fontsiyonuyla alıyoruz
+a = str(input("Bir sayı giriniz : "))
+#B sayısı rakamların toplamı olucak
+b = 0
+#A dizesinden rakamları alması için i değişkenini '''for''' a sokuyoruz
+for i in a:
+#i değişkeni string türünde olduğu için b+i çalışmaz bu yüzden i = int(i) yazıyoruz
+    i = int(i)
+    b = b+i
+#a string oldugu icin integer değerine eşitliyoruz
+a = int(a)
+#ve programımız sonunda sayının rakamlarının toplamını sayıya bölüyoruz eğer kalan 0 ise bu sayı Harshad sayısıdır
+if a%b == 0:
+    print("Girdiğiniz sayı Harshad sayısıdır.")
+else:
+    print("Girdiğiniz sayı Harshad sayısı değildir.")
+    
+### Çınar Satır
