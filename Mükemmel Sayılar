@@ -1,0 +1,16 @@
+#Mükemmel sayılar kendisi hariç bölenleri toplamı kendisine eşit olan sayılardır
+#Başta kullanıcıdan hangi sayıya kadar olan mükemmel sayıları istediğini '''input'''fonksiyonuyla alıyoruz
+c = int(input("Bir sayı giriniz : "))
+#sonra o sayıya kadar olan mükemmel sayıları bulmak icin sırasıyla 1,2,3... diye c değişkenine kadar for aciyoruz
+for i in range(0,c):
+#e değişkenini yani bölenlerin toplamını her for döndüğünde 0 alıyoruz yoksa giddikçe artar ve hiçbir zaman c ye eşit olmaz 
+    e = 0
+#i a ya bölünüyomu diye kontrol ediyoruz eğer bölünüyorsa a yı e ye ekliyoruz
+    for a in range(1,i):
+        if i%a == 0:
+            e = e+a
+#eğer e c ye eşitse arasında iki boşlukla yazdırıyoruz end="  " iki boşluk arayla yazmaya yarıyor
+    if i == e:
+        print(i,end="  ")
+        
+### Çınar Satır
