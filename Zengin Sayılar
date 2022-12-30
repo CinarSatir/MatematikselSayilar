@@ -1,0 +1,16 @@
+#Aslında mükemmel sayılardan bir farkı yok tek farkı mükemmel sayılarda bölenlerinin toplamı sayıya eşitken zengin sayılarda bölenlerinin toplamı sayıdan fazla
+#ilk başta kullanıcıdan zengin sayıları kaça kadar istediğini input fonksiyonu ile alıyoruz
+c = int(input("Bir sayı giriniz : "))
+#sonra for döngüsü ile c ye kadar olan sayıları alacağız
+for i in range(0,c):
+#Bu programda e = 0 çok önemli bir koddur çünkü e = 0 olmaz ise e herzaman artar ve bütün sayılar zengin sayı olurdu
+    e = 0
+#a sayısı i ye bölünen sayıları alıyor eğer a i ye bölünüyorsa e = e+a yani e ye a ekle  
+    for a in range(1,i):
+        if i%a == 0:
+            e = e+a
+#eğer e yani bölenlerin toplamı sayıdan büyük ise sayıyı yazdır
+    if i < e:
+        print(i,end="  ")
+
+### Çınar Satır
