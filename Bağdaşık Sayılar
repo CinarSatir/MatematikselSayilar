@@ -1,0 +1,25 @@
+#Birbirinden farklı iki pozitif tam sayıdan her birinin kendisi hariç pozitif bölenlerinin toplamı diğer sayıyı veriyorsa bu sayı ikilisine bağdaşık sayı denir.
+#İlk başta kullanıcıdan hangi sayı aralıgındaki bağdaşık sayıları istediğini input fonksiyonuyla alıyoruz
+a = int(input("Bir sayı giriniz : "))
+#for baslatıyoruz , sayıları teker teker deniyoruz
+for i in range(10,a):
+#bolenleri her döngü döndüğünde 0 a eşitliyoruz çünkü esitlemezsek sürekli artar
+    e = 0
+    g = 0
+#i nın bölenlerini bulmak icin c for unu acıyoruz
+    for c in range(1,i):
+        if i%c == 0:
+#bolenleri e ye ekliyoruz
+            e = e+c
+#bölenlerin toplamının bölenlerini for ile topluyoruz
+    for h in range(1,e):
+        if e%h == 0:
+            g = g+h
+#eğer sayılar esitse yazdırmıyoruz çünkü eşit sayıların bölenleri toplamı birbirine esittir zaten
+    if i == e:
+        g = 0
+# sayılar eşit değil ve sayılar ile diğer sayının böleni eşitse yazdırıyoruz
+    elif g == i:
+        print(i,"sayısı bir bağdaşık sayıdır.") 
+        
+### Çınar Satır
